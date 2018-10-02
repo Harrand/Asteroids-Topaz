@@ -45,7 +45,7 @@ void init()
             score_label.set_text(tz::utility::generic::cast::to_string(player.get_score()));
             spawner.tick_update(tps);
         }
-        manager.render(render_shader, &gui_shader, camera, {wnd.get_width(), wnd.get_height()});
+        manager.render(&render_shader, &gui_shader, camera, {wnd.get_width(), wnd.get_height()});
         wnd.update(gui_shader, nullptr);
     }
 }
